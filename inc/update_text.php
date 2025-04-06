@@ -548,15 +548,8 @@ $wp_customize->add_control( new WP_Customize_Color_Control ($wp_customize, 'bg_c
     'settings' => 'bg_color',                        
 ))); 
 
-
-
-
-
-
-
-    
-  }
+}
   
-  add_action('customize_register', 'nex123_customizar_register');
+add_action('customize_register', 'nex123_customizar_register');
 
 
