@@ -745,7 +745,6 @@ As a registered trademark agent, she advises clients on procedures and strategy 
  <button type="submit" class="btn btn-primary text-black bg-white ">SEND MASSAGE</button>
  </div>
 </form>
-<?php  comments_template()?>
 <?the_content();?>
 
 

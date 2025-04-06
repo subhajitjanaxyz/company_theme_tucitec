@@ -1,9 +1,9 @@
 <?php
 
 function nex123_customizar_register($wp_customize){
-
+//HOME SECTIONS =====================================================================================================
     $wp_customize->add_section('head23644', array(
-      'title' => __('heading', 'sjana'),
+      'title' => __('HOME', 'sjana'),
       'description' => 'If you interested to change or update your footer settings you can do it.'
     ));
 
@@ -84,7 +84,335 @@ function nex123_customizar_register($wp_customize){
         'setting' => 'dffdsfdsdfdfds33dfdfdf454dxffd',
         'section' => 'head23644',
       ));
-// ======================================================================================
+
+
+      $wp_customize->add_setting('backgd435', array(
+        'default' => "https://images.unsplash.com/photo-1510851896000-498520af2236?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZGFyayUyMG9mZmljZXxlbnwwfHwwfHx8MA%3D%3D",
+      ));
+    
+      $wp_customize-> add_control(new WP_Customize_Image_Control($wp_customize, 'backgd435', array(
+        'label' => 'Logo Upload',
+        'description' => 'If you interested to change or update your logo you can do it.',
+        'setting' => 'backgd435',
+        'section' => 'head23644',
+      ) ));
+
+// PORTFOLIO  =======================================================================================================
+$wp_customize->add_section('portfolio_fs4sf4sd32sf', array(
+  'title' => __('PORTFOLIO', 'sjana'),
+  'description' => 'If you interested to change or update your footer settings you can do it.'
+));
+
+$wp_customize->add_setting('slideheading', array(
+  'default' => 'PORTFOLIO',
+));
+
+$wp_customize-> add_control('slideheading', array(
+  'label' => 'TITLE',
+  'description' => '',
+  'setting' => 'slideheading',
+  'section' => 'portfolio_fs4sf4sd32sf',
+));
+
+
+
+
+//1ST SLIDE
+/////////////////heading
+$wp_customize->add_setting('slide1-heading', array(
+  'default' => 'slide1 heading',
+));
+
+$wp_customize-> add_control('slide1-heading', array(
+  'label' => 'slide 1 heading',
+  'description' => '',
+  'setting' => 'slide1-heading',
+  'section' => 'portfolio_fs4sf4sd32sf',
+));
+///////////text
+$wp_customize->add_setting('slide1-text', array(
+  'default' => 'slide1 heading',
+));
+
+$wp_customize-> add_control('slide1-text', array(
+  'label' => 'slide 1 text',
+  'description' => '',
+  'setting' => 'slide1-text',
+  'section' => 'portfolio_fs4sf4sd32sf',
+));
+//////// slide 1 bg img
+$wp_customize->add_setting('slide-image', array(
+  'default' => "https://images.unsplash.com/photo-1510851896000-498520af2236?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZGFyayUyMG9mZmljZXxlbnwwfHwwfHx8MA%3D%3D",
+));
+
+$wp_customize-> add_control(new WP_Customize_Image_Control($wp_customize, 'slide-image', array(
+  'label' => 'slide 1 background img',
+  'description' => 'If you interested to change or update your logo you can do it.',
+  'setting' => 'slide-image',
+  'section' => 'portfolio_fs4sf4sd32sf',
+) ));
+
+
+
+
+
+
+
+//2ND SLIDE
+/////////////////heading
+$wp_customize->add_setting('slide2-heading', array(
+  'default' => 'slide1 heading',
+));
+
+$wp_customize-> add_control('slide2-heading', array(
+  'label' => 'slide 1 heading',
+  'description' => '',
+  'setting' => 'slide2-heading',
+  'section' => 'portfolio_fs4sf4sd32sf',
+));
+///////////text
+$wp_customize->add_setting('slide2-text', array(
+  'default' => 'slide1 heading',
+));
+
+$wp_customize-> add_control('slide2-text', array(
+  'label' => 'slide 1 text',
+  'description' => '',
+  'setting' => 'slide2-text',
+  'section' => 'portfolio_fs4sf4sd32sf',
+));
+//////// slide  bg img
+$wp_customize->add_setting('slide2-image', array(
+  'default' => "https://images.unsplash.com/photo-1510851896000-498520af2236?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZGFyayUyMG9mZmljZXxlbnwwfHwwfHx8MA%3D%3D",
+));
+
+$wp_customize-> add_control(new WP_Customize_Image_Control($wp_customize, 'slide2-image', array(
+  'label' => 'slide 1 background img',
+  'description' => 'If you interested to change or update your logo you can do it.',
+  'setting' => 'slide2-image',
+  'section' => 'portfolio_fs4sf4sd32sf',
+) ));
+
+
+
+//3RD SLIDE
+/////////////////heading
+$wp_customize->add_setting('slide3-heading', array(
+  'default' => 'slide1 heading',
+));
+
+$wp_customize-> add_control('slide3-heading', array(
+  'label' => 'slide 1 heading',
+  'description' => '',
+  'setting' => 'slide3-heading',
+  'section' => 'portfolio_fs4sf4sd32sf',
+));
+///////////text
+$wp_customize->add_setting('slide3-text', array(
+  'default' => 'slide1 heading',
+));
+
+$wp_customize-> add_control('slide3-text', array(
+  'label' => 'slide 1 text',
+  'description' => '',
+  'setting' => 'slide3-text',
+  'section' => 'portfolio_fs4sf4sd32sf',
+));
+//////// slide 1 bg img
+$wp_customize->add_setting('slide3-image', array(
+  'default' => "https://images.unsplash.com/photo-1510851896000-498520af2236?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZGFyayUyMG9mZmljZXxlbnwwfHwwfHx8MA%3D%3D",
+));
+
+$wp_customize-> add_control(new WP_Customize_Image_Control($wp_customize, 'slide3-image', array(
+  'label' => 'slide 1 background img',
+  'description' => 'If you interested to change or update your logo you can do it.',
+  'setting' => 'slide3-image',
+  'section' => 'portfolio_fs4sf4sd32sf',
+) ));
+
+
+
+//OUR SERVICE==================================================================================================================
+$wp_customize->add_section('ourservice_safefs', array(
+  'title' => __('OUR SERVICE', 'sjana'),
+  'description' => 'If you interested to change or update your footer settings you can do it.'
+));
+//heading title
+$wp_customize->add_setting('headingfirsfor_service', array(
+  'default' => 'OUR SERVICE',
+));
+
+$wp_customize-> add_control('headingfirsfor_service', array(
+  'label' => 'company name',
+  'description' => '',
+  'setting' => 'headingfirsfor_service',
+  'section' => 'ourservice_safefs',
+));
+//heading title 2
+$wp_customize->add_setting('hey78ourservice_safefs343', array(
+  'default' => 'What We Offer',
+));
+
+$wp_customize-> add_control('hey78ourservice_safefs343', array(
+  'label' => 'company name',
+  'description' => '',
+  'setting' => 'hey78ourservice_safefs343',
+  'section' => 'ourservice_safefs',
+));
+//heading title 3
+$wp_customize->add_setting('ourservice_safefs343he8fde', array(
+  'default' => 'Comprehensive solutions designed for your success',
+));
+
+$wp_customize-> add_control('ourservice_safefs343he8fde', array(
+  'label' => 'company name',
+  'description' => '',
+  'setting' => 'ourservice_safefs343he8fde',
+  'section' => 'ourservice_safefs',
+));
+//card 1 
+////////////card title
+$wp_customize->add_setting('card_service_title1', array(
+  'default' => 'WEB APP',
+));
+
+$wp_customize-> add_control('card_service_title1', array(
+  'label' => 'card title 1st',
+  'description' => '',
+  'setting' => 'card_service_title1',
+  'section' => 'ourservice_safefs',
+));
+
+
+///////////card description
+$wp_customize->add_setting('card_service_title2', array(
+  'default' => 'Lorem ipsum dolor sit amet, error amet numquam iure provident voluptate esse quasi, veritatis',
+));
+
+$wp_customize-> add_control('card_service_title2', array(
+  'label' => 'card body 1st',
+  'description' => '',
+  'setting' => 'card_service_title2',
+  'section' => 'ourservice_safefs',
+));
+///////////card img
+$wp_customize->add_setting('card_service_igm', array(
+  'default' => "https://images.unsplash.com/photo-1510851896000-498520af2236?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZGFyayUyMG9mZmljZXxlbnwwfHwwfHx8MA%3D%3D",
+));
+
+$wp_customize-> add_control(new WP_Customize_Image_Control($wp_customize, 'card_service_igm', array(
+  'label' => 'card image 1st',
+  'description' => 'If you interested to change or update your logo you can do it.',
+  'setting' => 'card_service_igm',
+  'section' => 'ourservice_safefs',
+) ));
+
+
+
+
+
+
+
+
+
+
+
+//CLIENT REVIEW=====================================================================================
+$wp_customize->add_section('client_area', array(
+  'title' => __('CLIENT REVIEW', 'sjana'),
+  'description' => 'If you interested to change or update your footer settings you can do it.'
+));
+
+$wp_customize->add_setting('client_area3434', array(
+  'default' => 'Software Company',
+));
+
+$wp_customize-> add_control('client_area3434', array(
+  'label' => 'company name',
+  'description' => '',
+  'setting' => 'client_area3434',
+  'section' => 'client_area',
+));
+//ABout
+$wp_customize->add_section('About_sf3dsff', array(
+  'title' => __('ABOUT', 'sjana'),
+  'description' => 'If you interested to change or update your footer settings you can do it.'
+));
+
+$wp_customize->add_setting('about_fd88esfd', array(
+  'default' => 'Software Company',
+));
+
+$wp_customize-> add_control('about_fd88esfd', array(
+  'label' => 'company name',
+  'description' => '',
+  'setting' => 'about_fd88esfd',
+  'section' => 'About_sf3dsff',
+));
+//client
+$wp_customize->add_section('client_sfd6sdfe', array(
+  'title' => __('CLIENT', 'sjana'),
+  'description' => 'If you interested to change or update your footer settings you can do it.'
+));
+
+$wp_customize->add_setting('client_sfd6sdfe22', array(
+  'default' => 'Software Company',
+));
+
+$wp_customize-> add_control('client_sfd6sdfe22', array(
+  'label' => 'company name',
+  'description' => '',
+  'setting' => 'client_sfd6sdfe22',
+  'section' => 'client_sfd6sdfe',
+));
+//carrer
+$wp_customize->add_section('carrer_option', array(
+  'title' => __('CARRER', 'sjana'),
+  'description' => 'If you interested to change or update your footer settings you can do it.'
+));
+
+$wp_customize->add_setting('carrer_optionefsd', array(
+  'default' => 'Software Company',
+));
+
+$wp_customize-> add_control('carrer_optionefsd', array(
+  'label' => 'company name',
+  'description' => '',
+  'setting' => 'carrer_optionefsd',
+  'section' => 'carrer_option',
+));
+//contact
+$wp_customize->add_section('contact_area4d', array(
+  'title' => __('CONTACT', 'sjana'),
+  'description' => 'If you interested to change or update your footer settings you can do it.'
+));
+
+$wp_customize->add_setting('contact_ardfdfea4d', array(
+  'default' => 'Software Company',
+));
+
+$wp_customize-> add_control('contact_ardfdfea4d', array(
+  'label' => 'company name',
+  'description' => '',
+  'setting' => 'contact_ardfdfea4d',
+  'section' => 'contact_area4d',
+));
+//footer
+$wp_customize->add_section('footer_areae', array(
+  'title' => __('FOOTER', 'sjana'),
+  'description' => 'If you interested to change or update your footer settings you can do it.'
+));
+
+$wp_customize->add_setting('footer_areffddae', array(
+  'default' => 'Software Company',
+));
+
+$wp_customize-> add_control('footer_areffddae', array(
+  'label' => 'company name',
+  'description' => '',
+  'setting' => 'footer_areffddae',
+  'section' => 'footer_areae',
+));
 $wp_customize->add_section('headdfdf23644', array(
   'title' => __('hero area', 'sjana'),
   'description' => 'If you interested to change or update your footer settings you can do it.'
@@ -161,24 +489,6 @@ $wp_customize-> add_control('dffdsddfdffdfdf454dxf', array(
 
 //===================================================================
 
-  //Header Area Function
-  $wp_customize->add_section('backgroundimg', array(
-    'title' =>__('background img', 'alihossain'),
-    'description' => 'If you interested to update your header area, you can do it here.'
-  ));
-
-  $wp_customize->add_setting('backgd435', array(
-    'default' => "https://images.unsplash.com/photo-1510851896000-498520af2236?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZGFyayUyMG9mZmljZXxlbnwwfHwwfHx8MA%3D%3D",
-  ));
-
-  $wp_customize-> add_control(new WP_Customize_Image_Control($wp_customize, 'backgd435', array(
-    'label' => 'Logo Upload',
-    'description' => 'If you interested to change or update your logo you can do it.',
-    'setting' => 'backgd435',
-    'section' => 'backgroundimg',
-  ) ));
-  //prfile pic change
-    //Header Area Function
     $wp_customize->add_section('profilechane', array(
       'title' =>__('founder', 'sjana'),
       'description' => 'change profile pic'
