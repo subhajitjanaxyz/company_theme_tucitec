@@ -135,43 +135,41 @@ endif;
    
   </div>
 </div>
+<!-- //// -->
 
- <div id="carouselExampleIndicators" class="carousel slide">
+
+<?php $slide_count = get_theme_mod('slide_count', 3); ?>
+
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+
+  <!-- Carousel Indicators -->
   <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <?php for ($i = 0; $i < $slide_count; $i++): ?>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="<?php echo $i; ?>"
+        class="<?php echo ($i === 0) ? 'active' : ''; ?>"
+        aria-current="<?php echo ($i === 0) ? 'true' : 'false'; ?>"
+        aria-label="Slide <?php echo $i + 1; ?>"></button>
+    <?php endfor; ?>
   </div>
 
-
-
-
+  <!-- Carousel Items -->
   <div class="carousel-inner">
-                                  <div class="carousel-item active">
-                                  <div  class=" w-100 bg-danger caroinnterboxafds" 
-                                  
-                                  style="
-                                 background-image: url('https://t3.ftcdn.net/jpg/02/73/11/96/360_F_273119624_DpYqxwJia1SuX06o3oo2ggIu3oCvKC7O.jpg');
-                                  "
-                                  >
-                                    <h1 class="text-white"> 1Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
-                                    <p class="text-white">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim omnis sunt repudiandae facilis ipsum totam ducimus vero.</p>
-
-
-
-                                  </div>
-                                  </div>
-                                  <div class="carousel-item">
-                                  <div  class=" w-100 bg-danger text-center caroinnterboxafds" style="background-image:url('https://png.pngtree.com/thumb_back/fh260/background/20240224/pngtree-a-dark-office-room-in-home-image_15630921.jpg')"><h1 class="text-white"> Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
-                                    <p class="text-white">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim omnis sunt repudiandae facilis ipsum totam ducimus vero.</p>
-</div>
-                                  </div>
-                                  <div class="carousel-item">
-                                    <div  class=" w-100 bg-danger caroinnterboxafds" style="background-image:url('https://static.vecteezy.com/system/resources/thumbnails/032/936/610/small/dark-modern-office-illuminated-by-electric-lamp-free-photo.jpg')"><h2 class="text-white"> Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
-                                    <p class="text-white">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim omnis sunt repudiandae facilis ipsum totam ducimus vero.</p>
-</div>
-                                  </div>
+    <?php for ($i = 1; $i <= $slide_count; $i++): ?>
+      <?php
+        $heading = get_theme_mod("slide{$i}-heading");
+        $text = get_theme_mod("slide{$i}-text");
+        $image = esc_url(get_theme_mod("slide{$i}-image"));
+      ?>
+      <div class="carousel-item <?php echo ($i === 1) ? 'active' : ''; ?>">
+        <div class="w-100 caroinnterboxafds text-center" style="background-image: url('<?php echo $image; ?>'); background-size: cover; background-position: center; padding: 100px 20px;">
+          <h1 class="text-white"><?php echo esc_html($heading); ?></h1>
+          <p class="text-white"><?php echo esc_html($text); ?></p>
+        </div>
+      </div>
+    <?php endfor; ?>
   </div>
+
+  <!-- Controls -->
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
@@ -180,6 +178,7 @@ endif;
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
+
 </div>
 
 
@@ -198,115 +197,40 @@ endif;
 
  <!-- carosul  -->
 
- <div class="contianer-fluid py-5">
+ <?php $card_count = get_theme_mod('ourservice_card_count', 4); ?>
+
+<div class="container-fluid py-5">
   <div class="container">
     <h1 class="text-center" style="color:#1F3D83;">OUR SERVICE</h1>
     <h2 class="text-center">What We Offer</h2>
     <p class="text-center">Comprehensive solutions designed for your success</p>
+
     <div class="row">
-      <div class="col-md-4 col-lg-3 d-flex justify-content-center align-items-center py-2">
-
-
-
-      <div class="card" style="width: 18rem;">
-  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoQ4JQCNMfAk3-rvSOrdPglv2A2SORHC96Pw&s" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title text-center">WEB APP</h5>
-    <p class="card-text">Lorem ipsum dolor sit amet,  error amet numquam iure provident voluptate esse quasi, veritatis </p>
-  
-  </div>
-</div>
-
-
-        
-      </div>
-      <div class="col-md-4 col-lg-3 d-flex justify-content-center align-items-center py-2">
-
-
-
-
-      <div class="card" style="width: 18rem;">
-  <img src="https://bsmedia.business-standard.com/_media/bs/img/article/2024-01/29/full/1706528122-0941.jpg?im=FitAndFill=(826,465)" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title text-center">Digital Marketing
-    </h5>
-    <p class="card-text">Lorem ipsum dolor sit amet,  error amet numquam iure provident voluptate esse quasi, veritatis</p>
-  
-  </div>
-</div>
-
-
-
-
-
-
-      </div>
-      <div----- class="col-md-4 col-lg-3 d-flex justify-content-center align-items-center py-2">
-
-
-
-
-
-
-
-      <div class="card" style="width: 18rem;">
-  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoQ4JQCNMfAk3-rvSOrdPglv2A2SORHC96Pw&s" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title text-center">IT Consulting
-    </h5>
-    <p class="card-text">Lorem ipsum dolor sit amet,  error amet numquam iure provident voluptate esse quasi, veritatis.</p>
-  
-  </div>
-</div>
-
-
-
-
-
-
-
-
-      </div----->
-
-
-
-
-
-      <div----- class="col-md-4 col-lg-3 d-flex justify-content-center align-items-center py-2">
-
-
-
-
-
-
-
-<div class="card" style="width: 18rem;">
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoQ4JQCNMfAk3-rvSOrdPglv2A2SORHC96Pw&s" class="card-img-top" alt="...">
-<div class="card-body">
-<h5 class="card-title text-center">ERP APP</h5>
-<p class="card-text">Lorem ipsum dolor sit amet,  error amet numquam iure provident voluptate esse quasi, veritatis</p>
-
-</div>
-</div>
-
-
-
-
-
-
-
-
-</div----->
-
-
-
-
-
-
+      <?php for ($i = 1; $i <= $card_count; $i++): ?>
+        <div class="col-md-4 col-lg-3 d-flex justify-content-center align-items-center py-2">
+          <div class="card" style="width: 18rem;">
+            <img 
+              src="<?php echo esc_url(get_theme_mod("card_service_img$i")); ?>" 
+              class="card-img-top" 
+              alt="Service Image <?php echo $i; ?>">
+            <div class="card-body">
+              <h5 class="card-title text-center">
+                <?php echo esc_html(get_theme_mod("card_service_title$i")); ?>
+              </h5>
+              <p class="card-text">
+                <?php echo esc_html(get_theme_mod("card_service_desc$i")); ?>
+              </p>
+            </div>
+          </div>
+        </div>
+      <?php endfor; ?>
     </div>
-    
   </div>
- </div>
+</div>
+
+
+
+
 <!-- our portfolio  -->
 
 

@@ -114,121 +114,58 @@ $wp_customize-> add_control('slideheading', array(
   'section' => 'portfolio_fs4sf4sd32sf',
 ));
 
-
-
-
-//1ST SLIDE
-/////////////////heading
-$wp_customize->add_setting('slide1-heading', array(
-  'default' => 'slide1 heading',
+//add components
+$wp_customize->add_setting('slide_count', array(
+  'default' => 3,
+  'sanitize_callback' => 'absint',
 ));
 
-$wp_customize-> add_control('slide1-heading', array(
-  'label' => 'slide 1 heading',
-  'description' => '',
-  'setting' => 'slide1-heading',
+$wp_customize->add_control('slide_count', array(
+  'label' => __('Number of Slides'),
   'section' => 'portfolio_fs4sf4sd32sf',
-));
-///////////text
-$wp_customize->add_setting('slide1-text', array(
-  'default' => 'slide1 heading',
-));
-
-$wp_customize-> add_control('slide1-text', array(
-  'label' => 'slide 1 text',
-  'description' => '',
-  'setting' => 'slide1-text',
-  'section' => 'portfolio_fs4sf4sd32sf',
-));
-//////// slide 1 bg img
-$wp_customize->add_setting('slide-image', array(
-  'default' => "https://images.unsplash.com/photo-1510851896000-498520af2236?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZGFyayUyMG9mZmljZXxlbnwwfHwwfHx8MA%3D%3D",
+  'type' => 'number',
+  'input_attrs' => array(
+      'min' => 1,
+      'max' => 10,
+  ),
 ));
 
-$wp_customize-> add_control(new WP_Customize_Image_Control($wp_customize, 'slide-image', array(
-  'label' => 'slide 1 background img',
-  'description' => 'If you interested to change or update your logo you can do it.',
-  'setting' => 'slide-image',
-  'section' => 'portfolio_fs4sf4sd32sf',
-) ));
 
+$slide_count = get_theme_mod('slide_count', 3);
 
+for ($i = 1; $i <= $slide_count; $i++) {
+    // Heading
+    $wp_customize->add_setting("slide{$i}-heading", array(
+        'default' => "Slide {$i} Heading",
+    ));
 
+    $wp_customize->add_control("slide{$i}-heading", array(
+        'label' => "Slide {$i} Heading",
+        'section' => 'portfolio_fs4sf4sd32sf',
+    ));
 
+    // Text
+    $wp_customize->add_setting("slide{$i}-text", array(
+        'default' => "This is slide {$i} text",
+    ));
 
+    $wp_customize->add_control("slide{$i}-text", array(
+        'label' => "Slide {$i} Text",
+        'section' => 'portfolio_fs4sf4sd32sf',
+    ));
 
+    // Image
+    $wp_customize->add_setting("slide{$i}-image", array(
+        'default' => "https://images.unsplash.com/photo-1510851896000-498520af2236?fm=jpg&q=60&w=3000",
+    ));
 
-//2ND SLIDE
-/////////////////heading
-$wp_customize->add_setting('slide2-heading', array(
-  'default' => 'slide1 heading',
-));
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, "slide{$i}-image", array(
+        'label' => "Slide {$i} Background Image",
+        'section' => 'portfolio_fs4sf4sd32sf',
+        'setting' => "slide{$i}-image",
+    )));
+}
 
-$wp_customize-> add_control('slide2-heading', array(
-  'label' => 'slide 1 heading',
-  'description' => '',
-  'setting' => 'slide2-heading',
-  'section' => 'portfolio_fs4sf4sd32sf',
-));
-///////////text
-$wp_customize->add_setting('slide2-text', array(
-  'default' => 'slide1 heading',
-));
-
-$wp_customize-> add_control('slide2-text', array(
-  'label' => 'slide 1 text',
-  'description' => '',
-  'setting' => 'slide2-text',
-  'section' => 'portfolio_fs4sf4sd32sf',
-));
-//////// slide  bg img
-$wp_customize->add_setting('slide2-image', array(
-  'default' => "https://images.unsplash.com/photo-1510851896000-498520af2236?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZGFyayUyMG9mZmljZXxlbnwwfHwwfHx8MA%3D%3D",
-));
-
-$wp_customize-> add_control(new WP_Customize_Image_Control($wp_customize, 'slide2-image', array(
-  'label' => 'slide 1 background img',
-  'description' => 'If you interested to change or update your logo you can do it.',
-  'setting' => 'slide2-image',
-  'section' => 'portfolio_fs4sf4sd32sf',
-) ));
-
-
-
-//3RD SLIDE
-/////////////////heading
-$wp_customize->add_setting('slide3-heading', array(
-  'default' => 'slide1 heading',
-));
-
-$wp_customize-> add_control('slide3-heading', array(
-  'label' => 'slide 1 heading',
-  'description' => '',
-  'setting' => 'slide3-heading',
-  'section' => 'portfolio_fs4sf4sd32sf',
-));
-///////////text
-$wp_customize->add_setting('slide3-text', array(
-  'default' => 'slide1 heading',
-));
-
-$wp_customize-> add_control('slide3-text', array(
-  'label' => 'slide 1 text',
-  'description' => '',
-  'setting' => 'slide3-text',
-  'section' => 'portfolio_fs4sf4sd32sf',
-));
-//////// slide 1 bg img
-$wp_customize->add_setting('slide3-image', array(
-  'default' => "https://images.unsplash.com/photo-1510851896000-498520af2236?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZGFyayUyMG9mZmljZXxlbnwwfHwwfHx8MA%3D%3D",
-));
-
-$wp_customize-> add_control(new WP_Customize_Image_Control($wp_customize, 'slide3-image', array(
-  'label' => 'slide 1 background img',
-  'description' => 'If you interested to change or update your logo you can do it.',
-  'setting' => 'slide3-image',
-  'section' => 'portfolio_fs4sf4sd32sf',
-) ));
 
 
 
@@ -237,6 +174,23 @@ $wp_customize->add_section('ourservice_safefs', array(
   'title' => __('OUR SERVICE', 'sjana'),
   'description' => 'If you interested to change or update your footer settings you can do it.'
 ));
+
+$wp_customize->add_setting('ourservice_card_count', array(
+  'default' => 4,
+  'sanitize_callback' => 'absint',
+));
+
+$wp_customize->add_control('ourservice_card_count', array(
+  'label' => 'Number of Service Cards',
+  'type' => 'number',
+  'section' => 'ourservice_safefs',
+  'input_attrs' => array(
+    'min' => 1,
+    'max' => 12,
+  ),
+));
+$card_count = get_theme_mod('ourservice_card_count', 4);
+
 //heading title
 $wp_customize->add_setting('headingfirsfor_service', array(
   'default' => 'OUR SERVICE',
@@ -270,42 +224,47 @@ $wp_customize-> add_control('ourservice_safefs343he8fde', array(
   'setting' => 'ourservice_safefs343he8fde',
   'section' => 'ourservice_safefs',
 ));
-//card 1 
-////////////card title
-$wp_customize->add_setting('card_service_title1', array(
-  'default' => 'WEB APP',
-));
-
-$wp_customize-> add_control('card_service_title1', array(
-  'label' => 'card title 1st',
-  'description' => '',
-  'setting' => 'card_service_title1',
-  'section' => 'ourservice_safefs',
-));
 
 
-///////////card description
-$wp_customize->add_setting('card_service_title2', array(
-  'default' => 'Lorem ipsum dolor sit amet, error amet numquam iure provident voluptate esse quasi, veritatis',
-));
 
-$wp_customize-> add_control('card_service_title2', array(
-  'label' => 'card body 1st',
-  'description' => '',
-  'setting' => 'card_service_title2',
-  'section' => 'ourservice_safefs',
-));
-///////////card img
-$wp_customize->add_setting('card_service_igm', array(
-  'default' => "https://images.unsplash.com/photo-1510851896000-498520af2236?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZGFyayUyMG9mZmljZXxlbnwwfHwwfHx8MA%3D%3D",
-));
+// ===== OUR SERVICES CARDS - START =====
 
-$wp_customize-> add_control(new WP_Customize_Image_Control($wp_customize, 'card_service_igm', array(
-  'label' => 'card image 1st',
-  'description' => 'If you interested to change or update your logo you can do it.',
-  'setting' => 'card_service_igm',
-  'section' => 'ourservice_safefs',
-) ));
+
+for ($i = 1; $i <= $card_count; $i++) {
+  // Card Title
+  $wp_customize->add_setting("card_service_title$i", array(
+      'default' => 'Card Title ' . $i,
+  ));
+
+  $wp_customize->add_control("card_service_title$i", array(
+      'label' => "Card Title $i",
+      'section' => 'ourservice_safefs',
+      'setting' => "card_service_title$i",
+  ));
+
+  // Card Description
+  $wp_customize->add_setting("card_service_desc$i", array(
+      'default' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+  ));
+
+  $wp_customize->add_control("card_service_desc$i", array(
+      'label' => "Card Description $i",
+      'section' => 'ourservice_safefs',
+      'setting' => "card_service_desc$i",
+  ));
+
+  // Card Image
+  $wp_customize->add_setting("card_service_img$i", array(
+      'default' => "https://images.unsplash.com/photo-1510851896000-498520af2236?fm=jpg&q=60&w=3000",
+  ));
+
+  $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, "card_service_img$i", array(
+      'label' => "Card Image $i",
+      'section' => 'ourservice_safefs',
+      'setting' => "card_service_img$i",
+  )));
+}
+
 
 
 
