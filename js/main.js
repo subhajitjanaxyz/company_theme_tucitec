@@ -8,26 +8,8 @@ closebtn[0].addEventListener('click',()=>{
     iconx67r.classList.toggle("fa-x");
     iconx67r.classList.toggle("fa-bars");
 })
-console.log(closebtn);
+ 
+
+ 
 
 
-// jQuery(document).ready(function(){
-  
-//     jQuery('.owl-carousel').owlCarousel({
-//         loop:true,
-//         margin:10,
-//         nav:true,
-//         autoPlay: 1000,
-//         responsive:{
-//             0:{
-//                 items:1
-//             },
-//             600:{
-//                 items:1
-//             },
-//             1000:{
-//                 items:1
-//             }
-//         }
-//     })
-//     });

@@ -476,7 +476,7 @@ $wp_customize-> add_control('dffdsddfdffdfdf454dxf', array(
 
 //section create 
 $wp_customize->add_section('profilechane', array(
-  'title' =>__('founder', 'sjana'),
+  'title' =>__('TEAM PROFILE', 'sjana'),
   'description' => 'change profile pic'
 ));
 $wp_customize->add_setting("profilechane33ddd", array(

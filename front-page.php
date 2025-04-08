@@ -650,10 +650,7 @@ for ($i = 1; $i <= $slide_counted; $i++): ?>
 
 
 
-
-
-
-
+  
 
 
 
