@@ -130,7 +130,7 @@ endif;
  <!-- carosul  -->
 <div class="container-fluid py-5 text-uppercase">
   <div class="container text-center">
-  <h1 style="color:#1F3D83;" >PORTFOLIO</h1>
+  <h1 style="color:var(--heading-color);" >PORTFOLIO</h1>
 
    
   </div>
@@ -201,7 +201,7 @@ endif;
 
 <div class="container-fluid py-5">
   <div class="container">
-    <h1 class="text-center" style="color:#1F3D83;">OUR SERVICE</h1>
+    <h1 class="text-center" style="color:var(--heading-color);">OUR SERVICE</h1>
     <h2 class="text-center">What We Offer</h2>
     <p class="text-center">Comprehensive solutions designed for your success</p>
 
@@ -242,7 +242,7 @@ endif;
 <div class="container-fluid mt-5">
   <div class="row d-flex justify-content-center">
     <div class="col-md-10 col-xl-8 text-center">
-      <h3 class="mb-4" style="color:#1F3D83;">CLIENT REVIEW</h3>
+      <h3 class="mb-4" style="color:var(--heading-color);">CLIENT REVIEW</h3>
       <p class="mb-4 pb-2 mb-md-5 pb-md-0">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, error amet
         numquam iure provident voluptate esse quasi, veritatis totam voluptas nostrum
@@ -448,64 +448,39 @@ endif;
 
 <!-- about us -->
  <div class="container-fluid  py-5">
-  <h1 class="text-center" style="color:#1F3D83;">Who We Are</h1>
-  <h2 class="text-center">A team of passionate professionals committed to delivering excellence.</h2>
+  <h1 class="text-center" style="color:var(--heading-color);"><?php echo get_theme_mod("profilechane33ddd"); ?></h1>
+  <h2 class="text-center"><?php echo get_theme_mod("profilechane3dd3ddd"); ?></h2>
   <div class="container">
 <div class="row">
+
+
+
+
+
+
+<?php
+$slide_counted = get_theme_mod('slidde_count', 3);
+
+for ($i = 1; $i <= $slide_counted; $i++): ?>
 <div class="col-lg-6 d-flex justify-content-center align-items-center py-2">
-  <img src="<?php echo get_theme_mod('profilechane'); ?>" alt="" class="rounded-circle m-4" width="150px" height="150px">
+  <img src="<?php echo get_theme_mod("profilechane{$i}")?>" alt="" class="rounded-circle m-4" width="150px" height="150px">
   <div class="">
-    <h3><?php echo get_theme_mod('dffdsddfdffdfddddf454dxf'); ?></h3>
-    <h3 style="color:#1F3D83;"><?php echo get_theme_mod('dffdsdDFFDdfdffdfddddf454dxf'); ?></h3>
-    <p>Registered Trademark Agent​​
-As a registered trademark agent, she advises clients on procedures and strategy of IP prosecution in Malaysia and overseas. She actively shares her IP knowledge through publishing journals and organizing seminars and webinars on patents, trademarks, copyrights, and other areas of IP.</p>
+    <h3><?php echo get_theme_mod("profilechane33{$i}"); ?></h3>
+    <h3 style="color:var(--heading-color);"><?php echo get_theme_mod("profilechadne{$i}"); ?></h3>
+    <p><?php echo get_theme_mod("profilecffhadne{$i}"); ?></p>
   </div>
 </div>
-<div class="col-lg-6 d-flex justify-content-center align-items-center py-2">
-  <img src="https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg" alt="" class="rounded-circle m-4" width="150px" height="150px">
-  <div class="">
-    <h3>Sherleen Wan</h3>
-    <h3 style="color:#1F3D83;">CO-Founder</h3>
-    <p>Registered Trademark Agent​​
-As a registered trademark agent, she advises clients on procedures and strategy of IP prosecution in Malaysia and overseas. She actively shares her IP knowledge through publishing journals and organizing seminars and webinars on patents, trademarks, copyrights, and other areas of IP.</p>
-  </div>
-</div>
-<div class="col-lg-6 d-flex justify-content-center align-items-center py-2">
-  <img src="https://img.freepik.com/premium-vector/avatar-profile-icon-flat-style-female-user-profile-vector-illustration-isolated-background-women-profile-sign-business-concept_157943-38866.jpg" alt="" class="rounded-circle m-4" width="150px" height="150px">
-  <div class="">
-    <h3>Sherleen Wan</h3>
-    <h3 style="color:#1F3D83;">CEO</h3>
-    <p>Registered Trademark Agent​​
-As a registered trademark agent, she advises clients on procedures and strategy of IP prosecution in Malaysia and overseas. She actively shares her IP knowledge through publishing journals and organizing seminars and webinars on patents, trademarks, copyrights, and other areas of IP.</p>
-  </div>
-</div>
-<div class="col-lg-6 d-flex justify-content-center align-items-center py-2">
-  <img src="https://img.freepik.com/premium-vector/avatar-profile-icon-flat-style-female-user-profile-vector-illustration-isolated-background-women-profile-sign-business-concept_157943-38866.jpg" alt="" class="rounded-circle m-4"  width="150px" height="150px">
-  <div class="">
-    <h3>Sherleen Wan</h3>
-    <h3 style="color:#1F3D83;">PROJECT MANAGER</h3>
-    <p>Registered Trademark Agent​​
-As a registered trademark agent, she advises clients on procedures and strategy of IP prosecution in Malaysia and overseas. She actively shares her IP knowledge through publishing journals and organizing seminars and webinars on patents, trademarks, copyrights, and other areas of IP.</p>
-  </div>
-</div>
-<div class="col-lg-6 d-flex justify-content-center align-items-center py-2">
-  <img src="https://img.freepik.com/premium-vector/avatar-profile-icon-flat-style-female-user-profile-vector-illustration-isolated-background-women-profile-sign-business-concept_157943-38866.jpg" alt="" class="rounded-circle m-4" width="150px" height="150px">
-  <div class="">
-    <h3>Sherleen Wan</h3>
-    <h3 style="color:#1F3D83;">TEAM LEAD</h3>
-    <p>Registered Trademark Agent​​
-As a registered trademark agent, she advises clients on procedures and strategy of IP prosecution in Malaysia and overseas. She actively shares her IP knowledge through publishing journals and organizing seminars and webinars on patents, trademarks, copyrights, and other areas of IP.</p>
-  </div>
-</div>
-<div class="col-lg-6 d-flex justify-content-center align-items-center py-2">
-  <img src="https://img.freepik.com/premium-vector/avatar-profile-icon-flat-style-female-user-profile-vector-illustration-isolated-background-women-profile-sign-business-concept_157943-38866.jpg" alt="" class="rounded-circle m-4"  width="150px" height="150px">
-  <div class="">
-    <h3>Sherleen Wan</h3>
-    <h3 style="color:#1F3D83;">SUPPORT MANAGER</h3>
-    <p>Registered Trademark Agent​​
-As a registered trademark agent, she advises clients on procedures and strategy of IP prosecution in Malaysia and overseas. She actively shares her IP knowledge through publishing journals and organizing seminars and webinars on patents, trademarks, copyrights, and other areas of IP.</p>
-  </div>
-</div>
+<?php endfor; ?>
+
+
+
+
+
+
+
+
+
+
 </div>
   </div>
  </div>
@@ -514,10 +489,10 @@ As a registered trademark agent, she advises clients on procedures and strategy 
 <!-- carer option -->
 <div class="container-fluid   py-5">
   <div class="container text-uppercase text-center">
-   <h1 style="color:#1F3D83;" > Carrer opportunity</h1>
+   <h1 style="color:var(--heading-color);" > Carrer opportunity</h1>
    <h2 style="background-color:#1F3D83; " class="d-inline-block text-white px-5 my-3 rounded-5">join us</h2>
    <P class="">As a global company with unparalleled scale, a track record of pioneering innovation, and a huge and influential client base, we offer associates a chance to drive change and improve the lives of millions of people around the world</P>
-    <h2 style="color:#1F3D83;" class="py-3">We're Looking for</h2>
+    <h2 style="color:var(--heading-color);" class="py-3">We're Looking for</h2>
   </div>
 
   <div--- class="row">
@@ -525,7 +500,7 @@ As a registered trademark agent, she advises clients on procedures and strategy 
   <div class="col col-md-6 col-lg-3 d-flex justify-content-center align-items-center py-3">
     <div class="card" style="width: 18rem;">
   <div class="card-body">
-    <h5 class="card-title text-center fw-bolder" style="color:#1F3D83;">IT Executive INTERN</h5>
+    <h5 class="card-title text-center fw-bolder" style="color:var(--heading-color);">IT Executive INTERN</h5>
     <p class="card-text text-center">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 <div class="text-center">
 <a href="#" class=" btn  fw-bolder newcolorx">JOIN US <i class="fa-solid fa-arrow-right-long"></i></a>
@@ -539,7 +514,7 @@ As a registered trademark agent, she advises clients on procedures and strategy 
     <div class="col col-md-6 col-lg-3 d-flex justify-content-center align-items-center py-3">
     <div class="card" style="width: 18rem;">
   <div class="card-body">
-    <h5 class="card-title text-center fw-bolder" style="color:#1F3D83;">IT  INTERN</h5>
+    <h5 class="card-title text-center fw-bolder" style="color:var(--heading-color);">IT  INTERN</h5>
     <p class="card-text text-center">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 <div class="text-center">
 <a href="#" class=" btn newcolorx fw-bolder">JOIN US <i class="fa-solid fa-arrow-right-long"></i></a>
@@ -553,7 +528,7 @@ As a registered trademark agent, she advises clients on procedures and strategy 
     <div class="col col-md-6 col-lg-3 d-flex justify-content-center align-items-center py-3">
     <div class="card" style="width: 18rem;">
   <div class="card-body">
-    <h5 class="card-title text-center  fw-bolder" style="color:#1F3D83;">IT Executive INTERN</h5>
+    <h5 class="card-title text-center  fw-bolder" style="color:var(--heading-color);">IT Executive INTERN</h5>
     <p class="card-text text-center">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 <div class="text-center">
 <a href="#" class=" btn newcolorx fw-bolder">JOIN US <i class="fa-solid fa-arrow-right-long"></i></a>
@@ -568,7 +543,7 @@ As a registered trademark agent, she advises clients on procedures and strategy 
     <div class="col col-md-6 col-lg-3 d-flex justify-content-center align-items-center py-3">
     <div class="card" style="width: 18rem;">
   <div class="card-body">
-    <h5 class="card-title text-center fw-bolder" style="color:#1F3D83;">IT Executive INTERN</h5>
+    <h5 class="card-title text-center fw-bolder" style="color:var(--heading-color);">IT Executive INTERN</h5>
     <p class="card-text text-center">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 <div class="text-center">
 <a href="#" class=" btn newcolorx fw-bolder">JOIN US <i class="fa-solid fa-arrow-right-long"></i></a>
@@ -582,22 +557,7 @@ As a registered trademark agent, she advises clients on procedures and strategy 
       <div class="col col-md-6 col-lg-3 d-flex justify-content-center align-items-center py-3">
     <div class="card" style="width: 18rem;">
   <div class="card-body">
-    <h5 class="card-title text-center fw-bolder" style="color:#1F3D83;">IT Executive INTERN</h5>
-    <p class="card-text text-center">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-<div class="text-center">
-<a href="#" class=" btn newcolorx fw-bolder">JOIN US <i class="fa-solid fa-arrow-right-long"></i></a>
-
-</div>  </div>
-</div>
-    </div>
-  <!-- carrer card col -->
-
-
-      <!-- carrer card col -->
-      <div class="col col-md-6 col-lg-3 d-flex justify-content-center align-items-center py-3">
-    <div class="card" style="width: 18rem;">
-  <div class="card-body">
-    <h5 class="card-title text-center fw-bolder" style="color:#1F3D83;">IT Executive INTERN</h5>
+    <h5 class="card-title text-center fw-bolder" style="color:var(--heading-color);">IT Executive INTERN</h5>
     <p class="card-text text-center">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 <div class="text-center">
 <a href="#" class=" btn newcolorx fw-bolder">JOIN US <i class="fa-solid fa-arrow-right-long"></i></a>
@@ -612,7 +572,7 @@ As a registered trademark agent, she advises clients on procedures and strategy 
       <div class="col col-md-6 col-lg-3 d-flex justify-content-center align-items-center py-3">
     <div class="card" style="width: 18rem;">
   <div class="card-body">
-    <h5 class="card-title text-center fw-bolder" style="color:#1F3D83;">IT Executive INTERN</h5>
+    <h5 class="card-title text-center fw-bolder" style="color:var(--heading-color);">IT Executive INTERN</h5>
     <p class="card-text text-center">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 <div class="text-center">
 <a href="#" class=" btn newcolorx fw-bolder">JOIN US <i class="fa-solid fa-arrow-right-long"></i></a>
@@ -627,7 +587,22 @@ As a registered trademark agent, she advises clients on procedures and strategy 
       <div class="col col-md-6 col-lg-3 d-flex justify-content-center align-items-center py-3">
     <div class="card" style="width: 18rem;">
   <div class="card-body">
-    <h5 class="card-title text-center fw-bolder" style="color:#1F3D83;">IT Executive INTERN</h5>
+    <h5 class="card-title text-center fw-bolder" style="color:var(--heading-color);">IT Executive INTERN</h5>
+    <p class="card-text text-center">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+<div class="text-center">
+<a href="#" class=" btn newcolorx fw-bolder">JOIN US <i class="fa-solid fa-arrow-right-long"></i></a>
+
+</div>  </div>
+</div>
+    </div>
+  <!-- carrer card col -->
+
+
+      <!-- carrer card col -->
+      <div class="col col-md-6 col-lg-3 d-flex justify-content-center align-items-center py-3">
+    <div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title text-center fw-bolder" style="color:var(--heading-color);">IT Executive INTERN</h5>
     <p class="card-text text-center">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 <div class="text-center">
 <a href="#" class=" btn newcolorx fw-bolder">JOIN US <i class="fa-solid fa-arrow-right-long"></i></a>

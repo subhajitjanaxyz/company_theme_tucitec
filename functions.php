@@ -10,11 +10,11 @@ function add_color_for_web(){
 ?>
 <style>
 :root{
+    /* add file */
 --background-color:<?php echo get_theme_mod('bg_color', '#f0a709'); ?> !important;
+--heading-color:<?php echo get_theme_mod('heading_colors', '#f0a709'); ?> !important;
 }
-.subhajit{
-background-color: red;        
-}
+
 </style>
 <?php
 } 

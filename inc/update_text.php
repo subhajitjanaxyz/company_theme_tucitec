@@ -1,6 +1,32 @@
 <?php
 
 function nex123_customizar_register($wp_customize){
+//theme color 
+$wp_customize->add_section('colors', array(       
+  'title' => __('THEME COLOUR ', 'myTheme'),
+));
+
+$wp_customize->add_setting('bg_color', array(      
+  'default' => '#ffffff',
+));
+
+$wp_customize->add_control( new WP_Customize_Color_Control ($wp_customize, 'bg_color', array(
+  'label' => __('Background Color', 'myTheme'),
+  'section' => 'colors',
+  'settings' => 'bg_color',                        
+))); 
+//heading color
+$wp_customize->add_setting('heading_colors', array(      
+  'default' => '#1F3D83',
+));
+
+$wp_customize->add_control( new WP_Customize_Color_Control ($wp_customize, 'heading_colors', array(
+  'label' => __('all heading Color', 'myTheme'),
+  'section' => 'colors',
+  'settings' => 'heading_colors',                        
+)));
+
+
 //HOME SECTIONS =====================================================================================================
     $wp_customize->add_section('head23644', array(
       'title' => __('HOME', 'sjana'),
@@ -448,64 +474,141 @@ $wp_customize-> add_control('dffdsddfdffdfdf454dxf', array(
 
 //===================================================================
 
-    $wp_customize->add_section('profilechane', array(
-      'title' =>__('founder', 'sjana'),
-      'description' => 'change profile pic'
-    ));
-  
-    $wp_customize->add_setting('profilechane', array(
-      'default' => "https://plus.unsplash.com/premium_photo-1689568126014-06fea9d5d341?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D",
-    ));
-  
-    $wp_customize-> add_control(new WP_Customize_Image_Control($wp_customize, 'profilechane', array(
-      'label' => 'change profile pic',
-      'description' => 'If you interested to change or update your logo you can do it.',
-      'setting' => 'profilechane',
-      'section' => 'profilechane',
-    ) ));
-
-    //name 
-    
-$wp_customize->add_setting('dffdsddfdffdfddddf454dxf', array(
-  'default' => 'Sherleen Wan',
+//section create 
+$wp_customize->add_section('profilechane', array(
+  'title' =>__('founder', 'sjana'),
+  'description' => 'change profile pic'
+));
+$wp_customize->add_setting("profilechane33ddd", array(
+  'default' => 'Who We Are',
 ));
 
-$wp_customize-> add_control('dffdsddfdffdfddddf454dxf', array(
+$wp_customize-> add_control("profilechane33ddd", array(
   'label' => 'name',
   'description' => '',
-  'setting' => 'dffdsddfdffdfddddf454dxf',
+  'setting' => "profilechane33ddd",
   'section' => 'profilechane',
 ));
 
-$wp_customize->add_setting('dffdsdDFFDdfdffdfddddf454dxf', array(
-  'default' => 'Founder',
+$wp_customize->add_setting("profilechane3dd3ddd", array(
+  'default' => 'A team of passionate professionals committed to delivering excellence.',
 ));
 
-$wp_customize-> add_control('dffdsdDFFDdfdffdfddddf454dxf', array(
+$wp_customize-> add_control("profilechane3dd3ddd", array(
+  'label' => 'name',
+  'description' => '',
+  'setting' => "profilechane3dd3ddd",
+  'section' => 'profilechane',
+));
+
+
+
+
+
+
+
+
+//count 
+$wp_customize->add_setting('slidde_count', array(
+  'default' => 3,
+  'sanitize_callback' => 'absint',
+));
+
+$wp_customize->add_control('slidde_count', array(
+  'label' => __('Number of profile'),
+  'section' => 'profilechane',
+  'setting' => "slidde_count",
+  'type' => 'number',
+  'input_attrs' => array(
+      'min' => 1,
+      'max' => 10,
+  ),
+));
+
+
+$slide_count2 = get_theme_mod('slidde_count', 3);
+ 
+for($i=1; $i<=$slide_count2; $i++){
+// img
+  $wp_customize->add_setting("profilechane{$i}", array(
+    'default' => "https://plus.unsplash.com/premium_photo-1689568126014-06fea9d5d341?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D",
+  ));
+
+  $wp_customize-> add_control(new WP_Customize_Image_Control($wp_customize, "profilechane{$i}", array(
+    'label' => 'change profile pic',
+    'description' => 'If you interested to change or update your logo you can do it.',
+    'setting' => "profilechane{$i}",
+    'section' => 'profilechane',
+  ) ));
+//name
+  $wp_customize->add_setting("profilechane33{$i}", array(
+    'default' => 'Sherleen Wan',
+  ));
+  
+  $wp_customize-> add_control("profilechane33{$i}", array(
+    'label' => 'name',
+    'description' => '',
+    'setting' => "profilechane33{$i}",
+    'section' => 'profilechane',
+  ));
+  //position
+  $wp_customize->add_setting("profilechadne{$i}", array(
+    'default' => 'Founder',
+  ));
+  
+  $wp_customize-> add_control("profilechadne{$i}", array(
+    'label' => 'POSITION',
+    'description' => '',
+    'setting' => "profilechadne{$i}",
+    'section' => 'profilechane',
+  ));
+// description
+$wp_customize->add_setting("profilecffhadne{$i}", array(
+  'default' => 'Registered Trademark Agent​​
+As a registered trademark agent, she advises clients on procedures and strategy of IP prosecution in Malaysia and overseas. She actively shares her IP knowledge through publishing journals and organizing seminars and webinars on patents, trademarks, copyrights, and other areas of IP',
+));
+
+$wp_customize-> add_control("profilecffhadne{$i}", array(
   'label' => 'POSITION',
   'description' => '',
-  'setting' => 'dffdsdDFFDdfdffdfddddf454dxf',
+  'setting' => "profilecffhadne{$i}",
   'section' => 'profilechane',
-));
-  // color change 
+)); }
 
 
 
-  $wp_customize->add_section('colors', array(       
-    'title' => __('Colors', 'myTheme'),
-    'priority' => 30
-));
 
-$wp_customize->add_setting('bg_color', array(      
-    'default' => '#ffffff',
-                   
-));
 
-$wp_customize->add_control( new WP_Customize_Color_Control ($wp_customize, 'bg_color', array(
-    'label' => __('Background Color', 'myTheme'),
-    'section' => 'colors',
-    'settings' => 'bg_color',                        
-))); 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
 
 }
   
